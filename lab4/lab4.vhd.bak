@@ -1,0 +1,36 @@
+Library IEEE;
+USE IEEE.std_logic_1164.all;
+
+Entity Noise_Gen IS
+
+PORT( rst, clk : IN std_logic;
+shft_in : IN std_logic;
+shft_out: OUT std_logic_vector(15 downto 0)
+);
+
+END Noise_Gen;
+
+15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0
+
+rst clk Figure: Linear feedback shift-register (LFSR)
+
+
+ARCHITECTURE behavioural OF Noise_Gen IS
+signal shift_reg: std_logic_vector(15 downto 0);
+Signal Tem:std_logic;
+
+BEGIN
+Tem <= shift_reg(15) xor shift_reg(14) xor shift_reg(12) xor shift_reg(3);
+
+Process (clk,rst)
+BEGIN
+IF rst='0' THEN
+shift_reg<=(X"8000");
+ELSIF clk'event and clk='1' THEN
+
+shift_reg(15 downto 1)<=shift_reg(14 downto 0);
+shift_reg(0)<= Tem;
+END IF;
+END Process;
+shft_out<=shift_reg;
+End behavioural;
