@@ -1,0 +1,63 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do lab3_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/Users/Masood Ahmed Rafay/Desktop/Embedded Systems/2nd Semester/VHDL/New folder/lab3/Vhdl3.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Vhdl3
+# -- Compiling architecture rtl of Vhdl3
+# 
+vsim -voptargs=+acc work.vhdl3
+# vsim -voptargs=+acc work.vhdl3 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.vhdl3(rtl)
+add wave -position insertpoint  \
+sim:/vhdl3/nrst
+wave create -driver freeze -pattern constant -value 1 -starttime 0ps -endtime 1000ps sim:/vhdl3/nrst
+add wave -position insertpoint  \
+sim:/vhdl3/clk
+force -freeze sim:/vhdl3/clk 1 0, 0 {50 ps} -r 100
+wave create -driver freeze -pattern clock -initialvalue 0 -period 100ps -dutycycle 50 -starttime 0ps -endtime 1000ps sim:/vhdl3/clk
+run
+add wave -position insertpoint  \
+sim:/vhdl3/clk_out
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# 
+# Internal Error: In tclprim_ApplyStimulus for /vhdl3/clk "Time value must be greater than "now": 1000 ps
+# ** Error: (vsim-4004) The -cancel option requires a time period argument.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]"
+run
+run
+# 
+# Internal Error: In tclprim_ApplyStimulus for /vhdl3/clk "Time value must be greater than "now": 1000 ps
+# ** Error: (vsim-4004) The -cancel option requires a time period argument.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]"
+run
+run
+# 
+# Internal Error: In tclprim_ApplyStimulus for /vhdl3/clk "Time value must be greater than "now": 1000 ps
+# ** Error: (vsim-4004) The -cancel option requires a time period argument.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]"

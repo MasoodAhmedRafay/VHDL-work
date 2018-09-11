@@ -1,0 +1,12 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/Masood Ahmed Rafay/Desktop/Embedded Systems/2nd Semester/VHDL/New folder/lab3/Vhdl3.vhd
+source_file = 1, C:/Users/Masood Ahmed Rafay/Desktop/Embedded Systems/2nd Semester/VHDL/New folder/lab3/db/lab3.cbx.xml
+source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = Vhdl3
+instance = comp, \clk~I\, clk, Vhdl3, 1
+instance = comp, \Q~0\, Q~0, Vhdl3, 1
+instance = comp, \nrst~I\, nrst, Vhdl3, 1
+instance = comp, \clk_out~I\, clk_out, Vhdl3, 1
