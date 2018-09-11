@@ -1,0 +1,27 @@
+LIBRARY IEEE; 
+USE IEEE.std_logic_1164.all; 
+
+ 
+
+Entity Mux IS 
+ PORT (a, b, c, d : IN std_logic; 
+ s : IN std_logic_vector (1 downto 0); 
+ x : OUT std_logic 
+ ); 
+ 
+END Mux; 
+
+ 
+
+ARCHITECTURE mux4 OF Mux IS 
+BEGIN 
+ 
+ x <= a when s="00" ELSE 
+ b when s="01" ELSE 
+ c when s="10" ELSE 
+ d when s="11" ELSE 
+ 'X'; 
+
+ 
+
+END mux4;
